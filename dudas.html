@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aclara tus dudas | GRUPO HUMAN</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .faq-container {
+            max-width: 700px;
+            margin: 40px auto;
+            background: #f5f6fa;
+            border-radius: 16px;
+            box-shadow: 0 4px 24px rgba(26,35,126,0.10);
+            padding: 30px 20px;
+        }
+        .faq-title {
+            text-align: center;
+            color: #1a237e;
+            margin-bottom: 24px;
+            font-size: 2em;
+        }
+        .faq-item {
+            margin-bottom: 16px;
+            border-bottom: 1px solid #e3e6ee;
+        }
+        .faq-question {
+            cursor: pointer;
+            padding: 14px 0;
+            font-weight: bold;
+            color: #1a237e;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 1.1em;
+            transition: color 0.2s;
+        }
+        .faq-question:hover {
+            color: #43a047;
+        }
+        .faq-answer {
+            display: none;
+            padding: 0 0 14px 0;
+            color: #333;
+            font-size: 1em;
+        }
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+        .faq-item.active .faq-question i {
+            transform: rotate(180deg);
+        }
+        .faq-question i {
+            transition: transform 0.2s;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html"><i class="fas fa-home"></i> Inicio</a></li>
+                <li><a href="Acerca.html"><i class="fas fa-users"></i> Acerca de Nosotros</a></li>
+                <li><a href="contacto.html"><i class="fas fa-envelope"></i> Contacto</a></li>
+                <li><a href="servicios.html"><i class="fas fa-cogs"></i> Servicios</a></li>
+                <li><a href="elegirnos.html"><i class="fas fa-star"></i>¿Por qué elegirnos?</a></li>
+                <li><a href="dudas.html"><i class="fas fa-question-circle"></i> Dudas</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="faq-container">
+            <div class="faq-title">Aclara tus dudas rápido</div>
+            <div class="faq-item">
+                <div class="faq-question">¿Es necesario pagar seguridad social? <i class="fas fa-chevron-down"></i></div>
+                <div class="faq-answer">
+                    Sí, es obligatorio. Pagar seguridad social te protege en salud, pensión y riesgos laborales, y evita sanciones legales.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">¿Qué es la seguridad social? <i class="fas fa-chevron-down"></i></div>
+                <div class="faq-answer">Es el conjunto de servicios que protegen tu salud, pensión y riesgos laborales. ¡Nosotros te ayudamos a afiliarte fácil!</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">¿Puedo afiliarme si soy independiente? <i class="fas fa-chevron-down"></i></div>
+                <div class="faq-answer">Si podemos hacer la afiliacion bajo el nit de nuestra empresa </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">¿Cuánto tarda el proceso de afiliación? <i class="fas fa-chevron-down"></i></div>
+                <div class="faq-answer">¡Muy poco! En la mayoría de los casos, en menos de 12 horas hábiles.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">¿Qué documentos necesito? <i class="fas fa-chevron-down"></i></div>
+                <div class="faq-answer">Solo tu cédula y, si eres empresa, el RUT. Nosotros te guiamos en todo el proceso.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">¿Tienes alguna o otra duda? <i class="fas fa-chevron-down"></i></div>
+                <div class="faq-answer">Haz clic en <a href="contacto.html">Contacto</a> o escríbenos por WhatsApp al <b>+57 316 719 7604</b>.</div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2025 GRUPO HUMAN. Todos los derechos reservados.</p>
+    </footer>
+    <script>
+        // Acordeón interactivo
+        document.querySelectorAll('.faq-question').forEach(function(q) {
+            q.addEventListener('click', function() {
+                const item = this.parentElement;
+                item.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>
