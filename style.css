@@ -1,0 +1,384 @@
+body {
+    background: #f4f6f8;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+header {
+    background: #22304a;
+    padding: 0;
+    box-shadow: 0 2px 8px rgba(34,48,74,0.08);
+}
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+nav ul li {
+    margin: 0 18px;
+}
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1em;
+    padding: 15px 10px;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s;
+}
+nav ul li a:hover {
+    color: #3578e5;
+}
+nav ul li a i {
+    margin-right: 8px;
+}
+ .whatsapp-float {
+            position: fixed;
+            right: 24px;
+            bottom: 24px;
+            background: #1e3492;
+            color: #fff;
+            font-weight: bold;
+            padding: 14px 22px 14px 18px;
+            border-radius: 30px;
+            box-shadow: 0 4px 16px rgba(34,48,74,0.15);
+            font-size: 1.1em;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            z-index: 1000;
+            text-decoration: none;
+            transition: background 0.2s, box-shadow 0.2s;
+        }
+        .whatsapp-float:hover {
+            background: #128c7e;
+            box-shadow: 0 6px 24px rgba(34,48,74,0.22);
+            color: #fff;
+        }
+        .whatsapp-float i {
+            font-size: 1.5em;
+        }
+        @media (max-width: 600px) {
+            .whatsapp-float {
+                font-size: 1em;
+                padding: 12px 14px 12px 14px;
+                right: 10px;
+                bottom: 10px;
+            }
+            .whatsapp-float i {
+                font-size: 1.2em;
+            }
+        }
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 16px;
+    position: relative;
+}
+
+
+.menu-toggle {
+    display: none;
+    font-size: 1.8em;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    #navMenu {
+        flex-direction: column;
+        background: #1a237e;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        display: none;
+    }
+
+    #navMenu.active {
+        display: flex;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+}
+
+main {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(34,48,74,0.08);
+}
+.bienvenida {
+    text-align: center;
+    margin-bottom: 40px;
+}
+h1 {
+    color: #22304a;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+.resaltado {
+    color: #3578e5;
+    font-weight: bold;
+}
+.bienvenida p {
+    color: #3a4656;
+    font-size: 1.2em;
+}
+#infoBtn {
+    background: #3578e5;
+    color: #fff;
+    border: none;
+    padding: 12px 28px;
+    border-radius: 25px;
+    font-size: 1em;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background 0.3s;
+}
+#infoBtn:hover {
+    background: #22304a;
+}
+#mensajeEspecial {
+    margin-top: 20px;
+    background: #64b5f6;
+    color: #1a237e;
+    padding: 15px;
+    border-radius: 10px;
+    display: none;
+    font-size: 1.1em;
+}
+#mensajeEspecial:not(.oculto) {
+    display: block;
+}
+.oculto {
+    display: none;
+}
+.cards {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.card {
+    background: #f4f6f8;
+    border-radius: 16px;
+    padding: 30px 20px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 2px 12px rgba(34,48,74,0.10);
+    transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+    border: 1.5px solid #b0b8c1;
+    margin-bottom: 20px;
+}
+.card:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 8px 24px rgba(53,120,229,0.15);
+    background: #e9edf2;
+}
+.card i {
+    font-size: 2.5em;
+    color: #3578e5;
+    margin-bottom: 12px;
+    transition: color 0.2s;
+}
+.card:hover i {
+    color: #22304a;
+}
+.card h2 {
+    color: #22304a;
+    margin-bottom: 10px;
+}
+.card p {
+    color: #3a4656;
+    font-size: 1em;
+}
+.form-container {
+    max-width: 500px;
+    margin: 40px auto;
+    background: #f4f6f8;
+    padding: 30px 24px;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(34,48,74,0.10);
+}
+.form-container h2 {
+    color: #22304a;
+    text-align: center;
+    margin-bottom: 24px;
+}
+.form-group {
+    margin-bottom: 18px;
+}
+.form-group label {
+    color: #22304a;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 6px;
+}
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #b0b8c1;
+    background: #fff;
+    color: #22304a;
+}
+.toggle-group {
+    display: flex;
+    gap: 16px;
+    margin-top: 6px;
+}
+.toggle-btn {
+    flex: 1;
+    padding: 10px 0;
+    border: none;
+    border-radius: 8px;
+    background: #64b5f6;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.toggle-btn.active {
+    background: #43a047;
+}
+.consultar-btn {
+    width: 100%;
+    background: #3578e5;
+    color: #fff;
+    border: none;
+    padding: 14px 0;
+    border-radius: 25px;
+    font-size: 1.1em;
+    cursor: pointer;
+    margin-top: 18px;
+    transition: background 0.3s;
+}
+.consultar-btn:hover {
+    background: #22304a;
+}
+footer {
+    text-align: center;
+    padding: 18px 0;
+    background: #22304a;
+    color: #fff;
+    margin-top: 40px;
+    border-radius: 0 0 16px 16px;
+}
+
+/* Logo Seguridad Social */
+.logo-ss {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 18px 0 6px 0;
+    font-size: 1.5em;
+    color: #22304a;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+.logo-ss i {
+    color: #3578e5;
+    font-size: 1.4em;
+}
+
+/* Responsive styles */
+@media (max-width: 900px) {
+    header {
+        padding: 0;
+    }
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+    }
+    nav ul li {
+        margin: 6px 0;
+    }
+    main {
+        max-width: 98vw;
+        padding: 10px;
+    }
+    .cards {
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+    }
+    .card {
+        width: 90vw;
+        max-width: 350px;
+    }
+}
+
+@media (max-width: 600px) {
+    header {
+        padding: 0;
+    }
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+    }
+    nav ul li {
+        margin: 3px 0;
+    }
+    nav ul li a {
+        font-size: 1em;
+        padding: 10px 6px;
+    }
+    h1 {
+        font-size: 2em;
+    }
+    .bienvenida p,
+    .card p {
+        font-size: 1em;
+    }
+    .form-container {
+        max-width: 100vw;
+        padding: 10px 2vw;
+        box-sizing: border-box;
+    }
+    .form-group input,
+    .form-group select {
+        font-size: 1em;
+        padding: 10px 8px;
+        min-width: 0;
+    }
+    .toggle-group {
+        flex-direction: column;
+        gap: 8px;
+    }
+    .toggle-btn {
+        font-size: 1em;
+        padding: 10px 0;
+    }
+    .form-container h2 {
+        font-size: 1.3em;
+    }
+    .consultar-btn {
+        font-size: 1em;
+        padding: 10px 0;
+    }
+    footer {
+        font-size: 0.95em;
+        padding: 12px 0;
+        border-radius: 0 0 10px 10px;
+    }
+}
